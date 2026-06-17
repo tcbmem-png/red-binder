@@ -30,4 +30,8 @@ describe('poaSchema', () => {
     const parsed = poaSchema.parse({ effectiveness: 'immediately', jurisdiction: 'MS' });
     expect(parsed.giftPower).toBe(false);
   });
+
+  it('defaults effectiveness to immediate (springing is an explicit opt-out)', () => {
+    expect(poaSchema.parse({ jurisdiction: 'MS' }).effectiveness).toBe('immediately');
+  });
 });

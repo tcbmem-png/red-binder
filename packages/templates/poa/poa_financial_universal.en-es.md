@@ -19,7 +19,7 @@ block below; confirm each against the official act text before this sheds the DR
 
 This Durable Power of Attorney lets another person (your "Agent") make financial decisions about your property and money. Your Agent may act whether or not you are able to act for yourself.
 
-This Power of Attorney is **durable**: it is not affected by your later disability, incapacity, detention, or removal from the United States, nor by the passage of time. It is built on the Uniform Power of Attorney Act (UPOAA) and names the law of your state to govern it, so that banks and others can rely on it as widely as possible. It must be signed and notarized — and, to be honored everywhere, signed before two adult witnesses — before it has any effect. See the separate execution-instructions sheet.
+This Power of Attorney is **durable**: it is not affected by your later disability, incapacity, detention, or removal from the United States, nor by the passage of time. It is built on the Uniform Power of Attorney Act (UPOAA) and is governed by the law of your state. Its acceptance-and-reliance terms — see the "Third-Party Reliance and Acceptance" article below — ask any bank or person to rely on it in good faith and hold them harmless for doing so, so that it is honored as widely as possible. It must be signed and notarized — and, to be honored everywhere, signed before **two disinterested adult witnesses** — before it has any effect. See the separate execution-instructions sheet.
 
 ---
 
@@ -94,13 +94,15 @@ The meaning and effect of this Power of Attorney, and the authority of my Agent 
 
 # **ARTICLE II — EFFECTIVENESS**
 
-This Power of Attorney:
+This Power of Attorney takes effect **immediately** when I sign it, and it remains effective if I later become incapacitated, detained, or removed from the United States. *(UPOAA § 109(a) — a power of attorney is effective when executed unless it provides otherwise.)*
 
-{{effective_immediately}} takes effect immediately.
+{{effective_immediately}} I choose immediate effect. **(Recommended.)**
 
-{{effective_on_incapacity}} takes effect only upon my incapacity.
+{{effective_on_incapacity}} Instead, I choose for this Power of Attorney to take effect only upon my incapacity (a "springing" power).
 
-If this Power of Attorney is triggered by incapacity, "incapacity" means any one of the following:
+**If you choose the springing option, read this:** a springing Power of Attorney does not work until the triggering event is proven. Under UPOAA § 109(c), if I have not named someone to decide, it becomes effective only upon a written determination — for example, by a physician — that I am incapacitated. That extra step can delay my Agent when time matters most. Immediate effect avoids it.
+
+If I choose the springing option, "incapacity" means any one of the following:
 
 1. medical or cognitive impairment;
 2. arrest, incarceration, or detention;
@@ -109,8 +111,6 @@ If this Power of Attorney is triggered by incapacity, "incapacity" means any one
 5. deportation or removal from the United States;
 6. inability to communicate or be physically present for legal or financial transactions; or
 7. disappearance or inability to be located.
-
-Under any of these conditions my Agent is authorized to act with immediate authority.
 
 ---
 
@@ -156,9 +156,11 @@ My Agent may operate any business I own; vote membership shares in limited-liabi
 
 ---
 
-# **ARTICLE VII — SUPPORT OF MY CHILDREN**
+# **ARTICLE VII — DIRECT SUPPORT OF MY SPOUSE AND DEPENDENTS**
 
-My Agent may spend my funds for the benefit of my children, including for housing, food, schooling, medical care, transportation, clothing, childcare, and counseling or social support. This authority does not require court appointment as guardian. *(This is expenditure of my own funds for my dependents' support under the general grant — it is not a gift of my property to others; see Article VIII.)*
+My Agent may use and spend my funds to pay, directly, for the support, health, education, and maintenance of my spouse and my dependents — including housing, food, schooling, medical care, transportation, clothing, childcare, and counseling or social support. My Agent makes these payments **directly to providers and other third parties** for their benefit. This authority does not require court appointment as guardian.
+
+This is **direct support, not a gift** — it is the payment of my dependents' needs from my own funds. A transfer of my property *to* another person as a gift is governed separately, and only if I elect it, under the limited gift authority below.
 
 ---
 
@@ -170,7 +172,7 @@ My Agent is specifically authorized to retain immigration counsel; obtain copies
 
 ---
 
-# **ARTICLE IX — LIMITED GIFT AUTHORITY (granted only because I elected it)**
+# **ADDITIONAL GRANT — LIMITED GIFT AUTHORITY (granted only because I elected it)**
 
 I expressly grant my Agent authority to make gifts of my property, and this authority is **limited** as follows:
 
@@ -178,19 +180,19 @@ I expressly grant my Agent authority to make gifts of my property, and this auth
 2. the total gifts to any one recipient in any calendar year may not exceed the annual federal gift-tax exclusion amount; and
 3. each gift must be consistent with my objectives if my Agent actually knows them, or otherwise with my best interest.
 
-This is the **only** gift authority my Agent has. *(UPOAA § 201(a)(2) — gift authority must be expressly granted; § 217 — a granted gift power is limited to the annual federal gift-tax exclusion per donee unless the document provides otherwise, and gifts must be consistent with the principal's objectives or best interest. This clause keeps the statutory cap and narrows the purpose to dependent support.)*
+A "gift" here means a transfer of my property *to* a person; it is distinct from the **direct support** payments authorized above, which are not gifts. This limited gift authority is the **only** gift authority my Agent has. *(UPOAA § 201(a)(2) — gift authority must be expressly granted; § 217 — a granted gift power is limited to the annual federal gift-tax exclusion per donee unless the document provides otherwise, and gifts must be consistent with the principal's objectives or best interest. This clause keeps the statutory cap and narrows the purpose to support of my spouse and dependents.)*
 
 <!-- endif -->
 
 ---
 
-# **ARTICLE X — LIMITATION ON AGENT SELF-BENEFIT**
+# **ARTICLE IX — LIMITATION ON AGENT SELF-BENEFIT**
 
 Unless my Agent is my ancestor, spouse, or descendant, my Agent may **not** use any authority under this Power of Attorney to create in my Agent — or in anyone my Agent is legally obligated to support — an interest in my property, whether by gift, right of survivorship, beneficiary designation, disclaimer, or otherwise. *(UPOAA § 201(b).)*
 
 ---
 
-# **ARTICLE XI — THIRD-PARTY RELIANCE AND ACCEPTANCE**
+# **ARTICLE X — THIRD-PARTY RELIANCE AND ACCEPTANCE**
 
 Any person, bank, financial institution, or entity may rely on this Power of Attorney as valid authority. A person who in good faith accepts this acknowledged Power of Attorney, without actual knowledge that it is void, invalid, or terminated, may rely on it as genuine, valid, and still in effect. *(UPOAA § 119.)*
 
@@ -200,9 +202,11 @@ I indemnify any person who in good faith accepts my Agent's instructions under t
 
 ---
 
-# **ARTICLE XII — TERMINATION**
+# **ARTICLE XI — TERMINATION**
 
-This Power of Attorney terminates only upon my death or my written revocation delivered to my Agent. It does **not** terminate upon my incapacity, detention, or deportation.
+This Power of Attorney terminates when I die or when I revoke it in a signed writing delivered to my Agent. It also terminates by operation of law as provided in UPOAA § 110 — for example, when its purpose is accomplished, or when my Agent and any successor I have named have all died, resigned, or become incapacitated. Because it is durable, it does **not** terminate upon my incapacity, detention, or deportation. *(UPOAA § 110(a) — default termination events; durability preserved per § 104.)*
+
+Separately, my Agent's authority ends as provided in UPOAA § 110(b) — including, if my Agent is my spouse, when an action is filed for our divorce, annulment, or legal separation. *(UPOAA § 110(b)(3).)*
 
 <!-- pagebreak -->
 
@@ -284,27 +288,33 @@ My Commission Expires: _______________________________
 **STATUS: DRAFT — NOT YET VERIFIED.** Unlike `poa_ms` / `poa_tn` (verified against MS/TN statute), this universal body is a source-anchored DRAFT assembled from the Uniform Power of Attorney Act (2006) for Taylor's clause-level review. Nothing here is final.
 
 **Clause → UPOAA source map** (confirm each against the official act before publishing):
-- Article I (governing law) → **§ 107** (meaning and effect by indicated jurisdiction). Sourced.
-- Article III (durability) → **§ 104** (durable unless expressly terminated by incapacity — UPOAA default is the inverse of the UDPAA "magic words" the MS/TN forms rely on). Sourced.
-- Article IV (general authority) → **§§ 201(c), 204–216** (subjects of general authority via a general grant). Grant-article *prose* ported from the verified `poa_ms` Article II (attorney-reviewed); the UPOAA anchoring is the new layer.
-- Articles V–VII (real property, business, child support) → ported verbatim (EN) from the verified `poa_ms` Articles III–V.
+- Article I (governing law) → **§ 107** (meaning and effect by the jurisdiction indicated in the instrument). Sourced.
+- Article II (effectiveness) → **§ 109(a)** (effective when executed unless it provides otherwise — so immediate is the default) + **§ 109(c)** (a springing, incapacity-triggered power becomes effective only on a written determination of incapacity — the basis for the springing-delay warning). Sourced (2026-06-17 redline).
+- Article III (durability) → **§ 104** (durable unless it expressly provides termination on incapacity — the inverse of the UDPAA "magic words" the MS/TN forms rely on). Sourced.
+- Article IV (general authority) → **§§ 201(c), 204–216** (subjects of general authority via a general grant). Prose ported from the verified `poa_ms` Article II; the UPOAA anchoring is the new layer.
+- Articles V–VI (real property, business) → ported verbatim (EN) from the verified `poa_ms` Articles III–IV.
+- Article VII (DIRECT support of spouse and dependents) → direct expenditure for dependents' support under the general grant. **Rescoped this redline** to direct third-party payments and made expressly distinct from a gift (the VII / gift seam). Adapted from `poa_ms` Article V.
 - Article VIII (immigration-context authority) → ported verbatim (EN) from the verified `poa_ms` Article VI.
-- Article IX (limited gift authority) → **§ 201(a)(2)** (gifts require an express grant) + **§ 217** (default cap = annual federal gift-tax exclusion per donee; gifts consistent with the principal's objectives/best interest). Renders ONLY when `{{grant_gift_power}}` is set. Narrowed beyond § 217 to dependent support, per Taylor 2026-06-17.
-- Article X (self-benefit limit) → **§ 201(b)** (non-relative agent may not self-benefit). Included as a protective floor regardless of elections.
-- Article XI (reliance/acceptance) → **§ 119** (good-faith reliance) + **§ 120** (accept-or-certify within seven business days). These are the bank-acceptance provisions the UDPAA forms deliberately omit.
+- Additional Grant — limited gift authority (un-numbered, conditional) → **§ 201(a)(2)** (gifts require an express grant) + **§ 217** (default cap = annual federal gift-tax exclusion per donee; consistent with the principal's objectives or best interest). Renders ONLY when `{{grant_gift_power}}` is set; narrowed to support of my spouse and dependents. **Note:** § 201(b) bars only a *non-relative* agent from self-benefit; a relative agent (my ancestor, spouse, or descendant) may direct this bounded gift consistent with § 201(b).
+- Article IX (self-benefit limit) → **§ 201(b)** (a non-relative agent may not self-benefit). Included as a protective floor regardless of elections.
+- Article X (reliance/acceptance) → **§ 119** (good-faith reliance) + **§ 120** (accept-or-certify within seven business days). The bank-acceptance provisions the UDPAA forms omit; this — an instrument term, not the governing-law choice — is the portability lever.
+- Article XI (termination) → **§ 110(a)** (default termination events; "only" removed so operation-of-law terminations are preserved) + **§ 110(b)(3)** (a spouse-agent's authority ends on divorce, annulment, or legal separation). Sourced (2026-06-17 redline).
 - §§ 201(a)(1),(3),(4),(5),(6),(7),(8) hot powers (trust, survivorship, beneficiary, delegate, annuity waiver, fiduciary, disclaim) → **deliberately NOT granted**, per Taylor's 2026-06-17 decision.
+- **Article numbering:** the gift grant is intentionally un-numbered ("Additional Grant") so the numbered Articles I–XI stay continuous whether or not the gift is elected.
 
 **Execution standard.** Notary + two disinterested adult witnesses (neither the agent) clears every U.S. jurisdiction's minimum for a financial POA (per the 50-state portability matrix). The body is executed to that superset; per-state specifics ride on the execution-instructions sheet and, for UNIVERSAL_PLUS_ADDENDUM states, the state addendum.
 
-**Token contract.** Name/agent tokens (`principal_*`, `agent_*`, `agent2_*`, `agent3_*`) source from `schema/core` (build phase 4). `{{governing_law_state}}` = the selected jurisdiction's name. `{{effective_*}}` are the effectiveness checkboxes. `{{grant_gift_power}}` is set (truthy) ONLY when the principal elected the bounded gift power — the engine's `<!-- if:grant_gift_power -->` then renders Article IX. Successor blocks are wrapped in hide-if-absent conditionals.
+**Token contract.** Name/agent tokens (`principal_*`, `agent_*`, `agent2_*`, `agent3_*`) source from `schema/core` (build phase 4). `{{governing_law_state}}` = the selected jurisdiction's name (always the principal's residence). `{{effective_*}}` are the effectiveness checkboxes; immediate is the default. `{{grant_gift_power}}` is set (truthy) ONLY when the principal elected the bounded gift power — the engine's `<!-- if:grant_gift_power -->` then renders the un-numbered "Additional Grant — Limited Gift Authority". Successor blocks are wrapped in hide-if-absent conditionals.
 
 ---
 
 ## Open questions for Taylor
 
-1. **Clause-level redline.** Confirm each clause above against the official UPOAA text (and your preferred phrasing). This DRAFT tracks the sourced sections but is not your verified wording.
-2. **Gift scope (Article IX).** Confirmed opt-in + § 217 cap; I narrowed the *purpose* to dependent support. Confirm that narrowing, or widen to the general § 217 standard.
-3. **Notary acknowledgment.** This uses a generic all-purpose acknowledgment. Confirm it's acceptable as the universal default, or specify a preferred neutral form.
-4. **"Incapacity" definition (Article II).** Ported from the MS form (includes detention/removal). Confirm it carries into the universal instrument.
-5. **Governing-law for non-UPOAA states.** For a principal in an own-statute state, § 107 still lets the document name that state's law; confirm we want the governing-law state to always be the principal's residence (vs. ever designating a UPOAA state).
+Redline of 2026-06-17 applied; this remains **DRAFT / NOT YET VERIFIED** pending your sign-off on the result.
+
+1. **Sign-off on the applied redline.** Confirm the reworded Article II (immediate default + springing warning, § 109), Article VII (direct support, rescoped), the un-numbered gift grant and the VII / gift seam, and Article XI (termination, § 110 incl. (b)(3) divorce) read as you intend.
+2. **Gift scope.** Now "support of my spouse and my dependents" + the § 217 cap. Confirm, or adjust.
+3. **Notary acknowledgment.** Generic all-purpose acknowledgment as the universal default — confirm, or specify a preferred neutral form.
+4. **Springing warning (Article II).** Confirm the § 109(c) plain-language warning is the right strength.
+5. **§ 107 governing law = the principal's residence, always** (no forum-shopping); portability rides on the Article X reliance terms. Confirmed 2026-06-17; recorded for the file.
 6. ES translation is phase 8, after your EN sign-off.

@@ -8,8 +8,9 @@ import { isJurisdictionCode } from '@red-binder/poa-data';
 export const effectivenessSchema = z.enum(['immediately', 'on_incapacity']);
 
 export const poaSchema = z.object({
-  /** When the POA takes effect. Drives the {{effective_*}} checkbox tokens. */
-  effectiveness: effectivenessSchema,
+  /** When the POA takes effect; immediate is the DEFAULT, springing is an explicit opt-out
+   *  (UPOAA §109(a)). Drives the {{effective_*}} checkbox tokens. */
+  effectiveness: effectivenessSchema.default('immediately'),
   /** The two-letter jurisdiction code (state of residence) — the POA's only branch key. */
   jurisdiction: z.string().refine(isJurisdictionCode, { message: 'Choose your state.' }),
   /**
