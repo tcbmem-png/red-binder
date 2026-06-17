@@ -94,7 +94,7 @@ The meaning and effect of this Power of Attorney, and the authority of my Agent 
 
 # **ARTICLE II — EFFECTIVENESS**
 
-This Power of Attorney takes effect **immediately** when I sign it, and it remains effective if I later become incapacitated, detained, or removed from the United States. *(UPOAA § 109(a) — a power of attorney is effective when executed unless it provides otherwise.)*
+This Power of Attorney takes effect as I choose below. **Immediate effect is recommended:** my Agent can act the moment I sign, and it remains effective if I later become incapacitated, detained, or removed from the United States. *(UPOAA § 109(a) — a power of attorney is effective when executed unless it provides that it becomes effective upon a future event.)*
 
 {{effective_immediately}} I choose immediate effect. **(Recommended.)**
 
