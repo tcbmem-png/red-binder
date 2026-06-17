@@ -1,0 +1,7 @@
+node_modules
+dist
+.turbo
+coverage
+pnpm-lock.yaml
+# Markdown (docs + templates) is authored by hand / attorney-reviewed — don't reflow it.
+*.md
