@@ -174,7 +174,7 @@ My Agent is specifically authorized to retain immigration counsel; obtain copies
 
 I expressly grant my Agent authority to make gifts of my property, and this authority is **limited** as follows:
 
-1. gifts may be made only for the support, health, education, or maintenance of my spouse and my dependent children; and
+1. gifts may be made only for the support, health, education, or maintenance of my spouse and my dependents; and
 2. the total gifts to any one recipient in any calendar year may not exceed the annual federal gift-tax exclusion amount; and
 3. each gift must be consistent with my objectives if my Agent actually knows them, or otherwise with my best interest.
 
