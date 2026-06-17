@@ -3,5 +3,7 @@ dist
 .turbo
 coverage
 pnpm-lock.yaml
+# Generated files (e.g. base64-embedded fonts) are machine-written.
+**/*.generated.ts
 # Markdown (docs + templates) is authored by hand / attorney-reviewed — don't reflow it.
 *.md
