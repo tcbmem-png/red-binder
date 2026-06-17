@@ -23,6 +23,11 @@ describe('poaSchema', () => {
 
   it('defines no name or agent fields (those live in core)', () => {
     const shape = Object.keys(poaSchema.shape);
-    expect(shape).toEqual(['effectiveness', 'jurisdiction']);
+    expect(shape).toEqual(['effectiveness', 'jurisdiction', 'giftPower']);
+  });
+
+  it('defaults giftPower to false (no hot power granted unless elected)', () => {
+    const parsed = poaSchema.parse({ effectiveness: 'immediately', jurisdiction: 'MS' });
+    expect(parsed.giftPower).toBe(false);
   });
 });

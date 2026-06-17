@@ -12,6 +12,14 @@ export const poaSchema = z.object({
   effectiveness: effectivenessSchema,
   /** The two-letter jurisdiction code (state of residence) — the POA's only branch key. */
   jurisdiction: z.string().refine(isJurisdictionCode, { message: 'Choose your state.' }),
+  /**
+   * The only UPOAA §201 "hot power" offered (decided 2026-06-17). When true, the app sets the
+   * {{grant_gift_power}} token and the bounded gift article (§201(a)(2) + §217, narrowed to
+   * dependent support) renders. Default false — no gift authority is granted. Every other hot
+   * power (trust, survivorship, beneficiary, delegate, annuity waiver, fiduciary, disclaim) is
+   * deliberately ungranted.
+   */
+  giftPower: z.boolean().default(false),
 });
 
 export type Effectiveness = z.infer<typeof effectivenessSchema>;
