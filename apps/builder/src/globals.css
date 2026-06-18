@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BRANDING — Build Handoff §1b. Light mode only for v1. shadcn convention: space-separated HSL. */
+@layer base {
+  :root {
+    --background: 36 55.6% 96.5%; /* #FBF7F1 bone */
+    --foreground: 12 8.8% 11.2%; /* #1F1B1A ink */
+
+    --card: 0 0% 100%;
+    --card-foreground: 12 8.8% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 12 8.8% 11.2%;
+
+    --primary: 4.2 64.6% 47.6%; /* #C8362B binder red */
+    --primary-foreground: 36 55.6% 96.5%; /* bone */
+
+    --secondary: 36.9 31.7% 92%; /* #F1ECE4 muted band */
+    --secondary-foreground: 12 8.8% 11.2%;
+
+    --muted: 36.9 31.7% 92%;
+    --muted-foreground: 16.4 5.4% 39.8%; /* #6B6360 steady gray */
+
+    --accent: 140 22% 92%; /* quiet-green tint */
+    --accent-foreground: 147.5 27.3% 17.3%;
+
+    --destructive: 35.6 50.8% 49.4%; /* #BE8A3E caution amber — NOT red */
+    --destructive-foreground: 36.8 68.8% 21.4%;
+
+    --border: 36 27% 85.5%; /* #E4DCD0 */
+    --input: 36 27% 85.5%;
+    --ring: 4.2 64.6% 47.6%; /* #C8362B */
+
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Atkinson Hyperlegible', ui-sans-serif, system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+}
