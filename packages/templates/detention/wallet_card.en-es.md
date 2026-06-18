@@ -9,7 +9,7 @@ generated_date: {{generated_date}}
 
 I am exercising my right to remain silent. I want to speak to a lawyer. I will not sign anything until I speak to a lawyer. I want to see an immigration judge.
 
-**DO NOT SIGN** any paper that says "stipulation," "removal order," "voluntary departure," or "waiver" until a lawyer explains it. Signing can erase your right to see a judge. No one can force you to sign. Voluntary departure is something you **ask a judge** for, with a lawyer — not a form an officer hands you.
+**DO NOT SIGN** any paper that says "stipulation," "removal order," "voluntary departure," or "waiver" until a lawyer explains it. Signing can erase your right to see a judge and bar you from coming back. No one can force you to sign. Voluntary departure is something you **ask a judge** for, with a lawyer — not a form an officer hands you.
 
 <!-- pagebreak -->
 
