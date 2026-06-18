@@ -61,9 +61,38 @@ export interface Strings {
   langToggle: string;
   tcb: string;
   notLegalAdvice: string;
+  stateOfLaw: StateOfLawStrings;
   cards: Record<DocKind, PickerCardCopy>;
   intake: IntakeStrings;
 }
+
+export interface StateOfLawLink {
+  label: string;
+  desc: string;
+  url: string;
+}
+
+export interface StateOfLawStrings {
+  heading: string;
+  intro: string;
+  links: StateOfLawLink[];
+  reviewedNote: string;
+}
+
+// Outbound trackers for the footer "State of the law" block — URLs independently verified live on
+// 2026-06-18 (docs/HANDOFF — Footer "State of the Law" Block). Single source of truth for the
+// hrefs; the EN/ES blocks below carry only labels + descriptions. Plain outbound links, never
+// embeds/scripts — nothing loads from these origins until the reader clicks.
+export const STATE_OF_LAW_URLS = {
+  immigrationReview: 'https://www.kktplaw.com/immigration-review-podcast/',
+  americanImmigrationCouncil: 'https://www.americanimmigrationcouncil.org/litigation/',
+  policyTracking: 'https://immpolicytracking.org/',
+  nipnlg: 'https://nipnlg.org/work/resources',
+  aila: 'https://www.aila.org/',
+} as const;
+
+// "Last reviewed by counsel" date — counsel bumps this ONE constant on each legal pass.
+export const LAST_REVIEWED = { en: 'June 2026', es: 'junio de 2026' } as const;
 
 export const STRINGS: Record<Locale, Strings> = {
   en: {
@@ -80,6 +109,39 @@ export const STRINGS: Record<Locale, Strings> = {
     tcb: 'A TCB Law initiative. Built by Taylor C. Berger, attorney (MS/TN).',
     notLegalAdvice:
       'This is a free tool, not legal advice, and using it does not make us your lawyers.',
+    stateOfLaw: {
+      heading: 'The law here is changing fast',
+      intro:
+        'Immigration detention and removal rules shift week to week — sometimes overnight, by court order. This site is reviewed by a licensed attorney, but it is not updated in real time, and nothing here is legal advice. For the current state of the law, follow the people who track it as it moves:',
+      links: [
+        {
+          label: 'Immigration Review',
+          desc: 'weekly case-law podcast (U.S. Supreme Court, BIA, and all Circuits, every Monday), from Kurzban Kurzban Tetzeli & Pratt.',
+          url: STATE_OF_LAW_URLS.immigrationReview,
+        },
+        {
+          label: 'American Immigration Council — Litigation',
+          desc: 'court challenges to detention and expedited removal, with current case status.',
+          url: STATE_OF_LAW_URLS.americanImmigrationCouncil,
+        },
+        {
+          label: 'Immigration Policy Tracking Project',
+          desc: 'a running record of every federal immigration policy change.',
+          url: STATE_OF_LAW_URLS.policyTracking,
+        },
+        {
+          label: 'National Immigration Project (NIPNLG)',
+          desc: 'practice advisories on detention, stipulated removal, and expedited removal.',
+          url: STATE_OF_LAW_URLS.nipnlg,
+        },
+        {
+          label: 'AILA',
+          desc: 'practice alerts from immigration lawyers nationwide.',
+          url: STATE_OF_LAW_URLS.aila,
+        },
+      ],
+      reviewedNote: `Last reviewed by counsel: ${LAST_REVIEWED.en}. If something here conflicts with what a lawyer tells you about your case, listen to the lawyer.`,
+    },
     cards: {
       poa: {
         name: 'Power of attorney — who handles money & home',
@@ -150,6 +212,39 @@ export const STRINGS: Record<Locale, Strings> = {
     tcb: 'Una iniciativa de TCB Law. Creado por Taylor C. Berger, abogado (MS/TN).',
     notLegalAdvice:
       'Esta es una herramienta gratuita, no es asesoría legal, y usarla no nos convierte en tus abogados.',
+    stateOfLaw: {
+      heading: 'La ley aquí está cambiando rápido',
+      intro:
+        'Las reglas sobre detención y deportación de inmigrantes cambian de semana a semana — a veces de un día para otro, por orden de un tribunal. Un abogado con licencia revisa este sitio, pero no se actualiza en tiempo real, y nada aquí es asesoría legal. Para conocer el estado actual de la ley, siga a quienes lo monitorean al momento:',
+      links: [
+        {
+          label: 'Immigration Review',
+          desc: 'pódcast semanal de jurisprudencia (Corte Suprema de EE. UU., BIA y todos los Circuitos, cada lunes), de Kurzban Kurzban Tetzeli & Pratt.',
+          url: STATE_OF_LAW_URLS.immigrationReview,
+        },
+        {
+          label: 'American Immigration Council — Litigios',
+          desc: 'demandas judiciales sobre detención y deportación acelerada, con el estado actual de cada caso (en inglés).',
+          url: STATE_OF_LAW_URLS.americanImmigrationCouncil,
+        },
+        {
+          label: 'Immigration Policy Tracking Project',
+          desc: 'registro continuo de cada cambio en la política migratoria federal (en inglés).',
+          url: STATE_OF_LAW_URLS.policyTracking,
+        },
+        {
+          label: 'National Immigration Project (NIPNLG)',
+          desc: 'guías prácticas sobre detención, orden estipulada de deportación y deportación acelerada (en inglés).',
+          url: STATE_OF_LAW_URLS.nipnlg,
+        },
+        {
+          label: 'AILA',
+          desc: 'alertas de abogados de inmigración a nivel nacional (en inglés).',
+          url: STATE_OF_LAW_URLS.aila,
+        },
+      ],
+      reviewedNote: `Última revisión por un abogado: ${LAST_REVIEWED.es}. Si algo aquí contradice lo que un abogado le dice sobre su caso, hágale caso al abogado.`,
+    },
     cards: {
       poa: {
         name: 'Poder legal — quién maneja el dinero y la casa',
