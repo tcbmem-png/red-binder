@@ -5,7 +5,7 @@ generated_date: {{generated_date}}
 
 # **POCKET PLAN — BINDER PAGE**
 
-**DRAFT — for attorney review. Not final.** The authorization language and the rights/immigration guidance on this page await attorney sign-off.
+**DRAFT — for attorney review.** The authorization section below awaits the attorney's signature.
 
 Keep this page at home and with your trusted person. It holds the details a lawyer needs to find you and act for you. The card you carry holds none of this.
 
@@ -116,10 +116,9 @@ This plan can't stop a deportation and isn't a lawyer. What it does: it helps yo
 
 ## VERIFIED — locked
 
-**STATUS: DRAFT — NOT YET SIGNED OFF.** Two pieces stay DRAFT until Taylor signs, and the rendered "DRAFT — for attorney review" banner stays until then:
+**STATUS: §4 SIGNED OFF; §1 AUTHORIZATION STILL DRAFT.** §4 (identity/decision rights + immigration-limits language) is signed off by Taylor (EOIR-registered attorney; bars / voluntary-departure / expedited-removal accuracy verified). One piece stays DRAFT until he signs, and the rendered "DRAFT — for attorney review" banner is now scoped to it:
 
-- the **§1 authorization** operative language (he signs it), and
-- the **§4** identity/decision rights + immigration-limits language (he is the EOIR-registered attorney; the bars / voluntary-departure / expedited-removal accuracy is his to verify).
+- the **§1 authorization** operative language (he signs it).
 
 **Source.** Authorization text and the §4 microcopy are transcribed from `DD — Phase 5 Legal Resolutions (DRAFT for Sign-off).md` §1 and §4; resolutions locked in `DECISION — Phase 5 Detention Flags.md`.
 
@@ -133,5 +132,5 @@ This plan can't stop a deportation and isn't a lawyer. What it does: it helps yo
 
 1. **§1 authorization wording + your signature** (and confirm the narrow scope + optional notarization).
 2. **§3 G-28** — ship the fillable form (flip `G28_FILLABLE_ENABLED`) or keep instructions-only.
-3. **§4 rights script + immigration-limits wording** — your sign-off (the VD distinction and the honest bars/deadline note especially).
+3. **§4 rights script + immigration-limits wording** — ✓ signed off by Taylor (VD distinction and the honest bars/deadline note included).
 4. ES follows in Phase 8 after your EN sign-off.

@@ -72,9 +72,10 @@ One Vercel project, this repo, **Root Directory `apps/builder`**. Vercel builds 
 ## License
 
 - **Code:** MIT — see [`LICENSE`](LICENSE).
-- **Legal templates / content** (`packages/templates`): license pending the project
-  owner's decision (CC BY 4.0 or CC0). Until then, the templates are DRAFT, for attorney
-  review, and not licensed for redistribution.
+- **Legal templates / content** (`packages/templates`): **CC BY 4.0** — see
+  [`packages/templates/LICENSE-CONTENT`](packages/templates/LICENSE-CONTENT). Free to copy,
+  adapt, and redeploy with attribution. The templates remain DRAFT, for attorney review — the
+  license governs reuse; it is not a statement that the content is final or legally approved.
 
 ## Status
 

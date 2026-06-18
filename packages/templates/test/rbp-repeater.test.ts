@@ -78,7 +78,11 @@ describe('RBP repeater blocks hide when empty (gotcha e / §3.A.1)', () => {
     // separator must also vanish when empty — keyed on the first row's token — so an empty plan
     // renders nothing there, not a lonely header.
     guardedBy(/^# \*\*SECTION 3 — CHILDREN\*\*$/, 'child_1_name', 'Section 3 heading');
-    guardedBy(/^\| # \| Document \/ Documento \| Location \/ Ubicación \|$/, 'doc_1_label', 'doc-table header');
+    guardedBy(
+      /^\| # \| Document \/ Documento \| Location \/ Ubicación \|$/,
+      'doc_1_label',
+      'doc-table header',
+    );
     guardedBy(/^\|---\|---\|---\|$/, 'doc_1_label', 'doc-table separator');
 
     // The always-present primary agent stays UNguarded (must never be hidden).
