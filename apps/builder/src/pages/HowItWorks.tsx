@@ -51,12 +51,8 @@ export function HowItWorks() {
         below. Read it slowly.
       </p>
 
-      <section className="rb-draft-section">
+      <section>
         <h2>The Pocket Plan — and the one decision that can't be undone</h2>
-        {/* DRAFT gate (§2): stays until Taylor signs the legal wording. */}
-        <p>
-          <span className="rb-draft-chip">Draft — for attorney review</span>
-        </p>
         <p>
           If ICE detains you, officers will push you to sign papers. They may tell you signing gets
           you out faster, or that if you don't sign you'll sit in detention for months. What they
