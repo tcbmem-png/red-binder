@@ -145,6 +145,8 @@ Address: **{{agent_address}}**
 Phone: **{{agent_phone}}**
 *Teléfono: {{agent_phone}}*
 
+<!-- if:agent2_first -->
+
 ---
 
 ## **Successor Agent (Backup)**
@@ -165,6 +167,9 @@ Address: **{{agent2_address}}**
 
 Phone: **{{agent2_phone}}**
 *Teléfono: {{agent2_phone}}*
+
+<!-- endif -->
+<!-- if:agent3_first -->
 
 ---
 
@@ -187,7 +192,11 @@ Address: **{{agent3_address}}**
 Phone: **{{agent3_phone}}**
 *Teléfono: {{agent3_phone}}*
 
+<!-- endif -->
+
 <!-- pagebreak -->
+
+<!-- if:child_1_name -->
 
 ---
 
@@ -211,6 +220,9 @@ Date of birth: **{{child_1_dob}}**
 School: **{{child_1_school}}**
 *Escuela: {{child_1_school}}*
 
+<!-- endif -->
+<!-- if:child_2_name -->
+
 ---
 
 ### Child 2 / Niño 2
@@ -223,6 +235,9 @@ Date of birth: **{{child_2_dob}}**
 
 School: **{{child_2_school}}**
 *Escuela: {{child_2_school}}*
+
+<!-- endif -->
+<!-- if:child_3_name -->
 
 ---
 
@@ -237,6 +252,9 @@ Date of birth: **{{child_3_dob}}**
 School: **{{child_3_school}}**
 *Escuela: {{child_3_school}}*
 
+<!-- endif -->
+<!-- if:child_4_name -->
+
 ---
 
 ### Child 4 / Niño 4
@@ -249,6 +267,9 @@ Date of birth: **{{child_4_dob}}**
 
 School: **{{child_4_school}}**
 *Escuela: {{child_4_school}}*
+
+<!-- endif -->
+<!-- if:child_5_name -->
 
 ---
 
@@ -263,6 +284,9 @@ Date of birth: **{{child_5_dob}}**
 School: **{{child_5_school}}**
 *Escuela: {{child_5_school}}*
 
+<!-- endif -->
+<!-- if:child_6_name -->
+
 ---
 
 ### Child 6 / Niño 6
@@ -275,6 +299,9 @@ Date of birth: **{{child_6_dob}}**
 
 School: **{{child_6_school}}**
 *Escuela: {{child_6_school}}*
+
+<!-- endif -->
+<!-- if:child_7_name -->
 
 ---
 
@@ -289,6 +316,9 @@ Date of birth: **{{child_7_dob}}**
 School: **{{child_7_school}}**
 *Escuela: {{child_7_school}}*
 
+<!-- endif -->
+<!-- if:child_8_name -->
+
 ---
 
 ### Child 8 / Niño 8
@@ -301,6 +331,9 @@ Date of birth: **{{child_8_dob}}**
 
 School: **{{child_8_school}}**
 *Escuela: {{child_8_school}}*
+
+<!-- endif -->
+<!-- if:child_9_name -->
 
 ---
 
@@ -315,6 +348,9 @@ Date of birth: **{{child_9_dob}}**
 School: **{{child_9_school}}**
 *Escuela: {{child_9_school}}*
 
+<!-- endif -->
+<!-- if:child_10_name -->
+
 ---
 
 ### Child 10 / Niño 10
@@ -327,6 +363,9 @@ Date of birth: **{{child_10_dob}}**
 
 School: **{{child_10_school}}**
 *Escuela: {{child_10_school}}*
+
+<!-- endif -->
+<!-- if:child_11_name -->
 
 ---
 
@@ -341,6 +380,9 @@ Date of birth: **{{child_11_dob}}**
 School: **{{child_11_school}}**
 *Escuela: {{child_11_school}}*
 
+<!-- endif -->
+<!-- if:child_12_name -->
+
 ---
 
 ### Child 12 / Niño 12
@@ -353,6 +395,9 @@ Date of birth: **{{child_12_dob}}**
 
 School: **{{child_12_school}}**
 *Escuela: {{child_12_school}}*
+
+<!-- endif -->
+<!-- if:child_13_name -->
 
 ---
 
@@ -367,6 +412,9 @@ Date of birth: **{{child_13_dob}}**
 School: **{{child_13_school}}**
 *Escuela: {{child_13_school}}*
 
+<!-- endif -->
+<!-- if:child_14_name -->
+
 ---
 
 ### Child 14 / Niño 14
@@ -379,6 +427,9 @@ Date of birth: **{{child_14_dob}}**
 
 School: **{{child_14_school}}**
 *Escuela: {{child_14_school}}*
+
+<!-- endif -->
+<!-- if:child_15_name -->
 
 ---
 
@@ -393,6 +444,9 @@ Date of birth: **{{child_15_dob}}**
 School: **{{child_15_school}}**
 *Escuela: {{child_15_school}}*
 
+<!-- endif -->
+<!-- if:child_16_name -->
+
 ---
 
 ### Child 16 / Niño 16
@@ -405,6 +459,9 @@ Date of birth: **{{child_16_dob}}**
 
 School: **{{child_16_school}}**
 *Escuela: {{child_16_school}}*
+
+<!-- endif -->
+<!-- if:child_17_name -->
 
 ---
 
@@ -419,6 +476,9 @@ Date of birth: **{{child_17_dob}}**
 School: **{{child_17_school}}**
 *Escuela: {{child_17_school}}*
 
+<!-- endif -->
+<!-- if:child_18_name -->
+
 ---
 
 ### Child 18 / Niño 18
@@ -431,6 +491,9 @@ Date of birth: **{{child_18_dob}}**
 
 School: **{{child_18_school}}**
 *Escuela: {{child_18_school}}*
+
+<!-- endif -->
+<!-- if:child_19_name -->
 
 ---
 
@@ -445,6 +508,9 @@ Date of birth: **{{child_19_dob}}**
 School: **{{child_19_school}}**
 *Escuela: {{child_19_school}}*
 
+<!-- endif -->
+<!-- if:child_20_name -->
+
 ---
 
 ### Child 20 / Niño 20
@@ -457,6 +523,8 @@ Date of birth: **{{child_20_dob}}**
 
 School: **{{child_20_school}}**
 *Escuela: {{child_20_school}}*
+
+<!-- endif -->
 
 <!-- pagebreak -->
 
@@ -545,38 +613,98 @@ Phone: **{{emergency_5_phone}}**
 Where to find important papers, IDs, keys, account information, and other documents. Originals stay where they are. This is the map.
 *Dónde encontrar papeles importantes, identificaciones, llaves, información de cuentas y otros documentos. Los originales se quedan donde están. Esto es el mapa.*
 
+<!-- if:doc_1_label -->
 | # | Document / Documento | Location / Ubicación |
 |---|---|---|
 | 1 | **{{doc_1_label}}** / *{{doc_1_label}}* | **{{doc_1_location}}** / *{{doc_1_location}}* |
+<!-- endif -->
+<!-- if:doc_2_label -->
 | 2 | **{{doc_2_label}}** / *{{doc_2_label}}* | **{{doc_2_location}}** / *{{doc_2_location}}* |
+<!-- endif -->
+<!-- if:doc_3_label -->
 | 3 | **{{doc_3_label}}** / *{{doc_3_label}}* | **{{doc_3_location}}** / *{{doc_3_location}}* |
+<!-- endif -->
+<!-- if:doc_4_label -->
 | 4 | **{{doc_4_label}}** / *{{doc_4_label}}* | **{{doc_4_location}}** / *{{doc_4_location}}* |
+<!-- endif -->
+<!-- if:doc_5_label -->
 | 5 | **{{doc_5_label}}** / *{{doc_5_label}}* | **{{doc_5_location}}** / *{{doc_5_location}}* |
+<!-- endif -->
+<!-- if:doc_6_label -->
 | 6 | **{{doc_6_label}}** / *{{doc_6_label}}* | **{{doc_6_location}}** / *{{doc_6_location}}* |
+<!-- endif -->
+<!-- if:doc_7_label -->
 | 7 | **{{doc_7_label}}** / *{{doc_7_label}}* | **{{doc_7_location}}** / *{{doc_7_location}}* |
+<!-- endif -->
+<!-- if:doc_8_label -->
 | 8 | **{{doc_8_label}}** / *{{doc_8_label}}* | **{{doc_8_location}}** / *{{doc_8_location}}* |
+<!-- endif -->
+<!-- if:doc_9_label -->
 | 9 | **{{doc_9_label}}** / *{{doc_9_label}}* | **{{doc_9_location}}** / *{{doc_9_location}}* |
+<!-- endif -->
+<!-- if:doc_10_label -->
 | 10 | **{{doc_10_label}}** / *{{doc_10_label}}* | **{{doc_10_location}}** / *{{doc_10_location}}* |
+<!-- endif -->
+<!-- if:doc_11_label -->
 | 11 | **{{doc_11_label}}** / *{{doc_11_label}}* | **{{doc_11_location}}** / *{{doc_11_location}}* |
+<!-- endif -->
+<!-- if:doc_12_label -->
 | 12 | **{{doc_12_label}}** / *{{doc_12_label}}* | **{{doc_12_location}}** / *{{doc_12_location}}* |
+<!-- endif -->
+<!-- if:doc_13_label -->
 | 13 | **{{doc_13_label}}** / *{{doc_13_label}}* | **{{doc_13_location}}** / *{{doc_13_location}}* |
+<!-- endif -->
+<!-- if:doc_14_label -->
 | 14 | **{{doc_14_label}}** / *{{doc_14_label}}* | **{{doc_14_location}}** / *{{doc_14_location}}* |
+<!-- endif -->
+<!-- if:doc_15_label -->
 | 15 | **{{doc_15_label}}** / *{{doc_15_label}}* | **{{doc_15_location}}** / *{{doc_15_location}}* |
+<!-- endif -->
+<!-- if:doc_16_label -->
 | 16 | **{{doc_16_label}}** / *{{doc_16_label}}* | **{{doc_16_location}}** / *{{doc_16_location}}* |
+<!-- endif -->
+<!-- if:doc_17_label -->
 | 17 | **{{doc_17_label}}** / *{{doc_17_label}}* | **{{doc_17_location}}** / *{{doc_17_location}}* |
+<!-- endif -->
+<!-- if:doc_18_label -->
 | 18 | **{{doc_18_label}}** / *{{doc_18_label}}* | **{{doc_18_location}}** / *{{doc_18_location}}* |
+<!-- endif -->
+<!-- if:doc_19_label -->
 | 19 | **{{doc_19_label}}** / *{{doc_19_label}}* | **{{doc_19_location}}** / *{{doc_19_location}}* |
+<!-- endif -->
+<!-- if:doc_20_label -->
 | 20 | **{{doc_20_label}}** / *{{doc_20_label}}* | **{{doc_20_location}}** / *{{doc_20_location}}* |
+<!-- endif -->
+<!-- if:doc_21_label -->
 | 21 | **{{doc_21_label}}** / *{{doc_21_label}}* | **{{doc_21_location}}** / *{{doc_21_location}}* |
+<!-- endif -->
+<!-- if:doc_22_label -->
 | 22 | **{{doc_22_label}}** / *{{doc_22_label}}* | **{{doc_22_location}}** / *{{doc_22_location}}* |
+<!-- endif -->
+<!-- if:doc_23_label -->
 | 23 | **{{doc_23_label}}** / *{{doc_23_label}}* | **{{doc_23_location}}** / *{{doc_23_location}}* |
+<!-- endif -->
+<!-- if:doc_24_label -->
 | 24 | **{{doc_24_label}}** / *{{doc_24_label}}* | **{{doc_24_location}}** / *{{doc_24_location}}* |
+<!-- endif -->
+<!-- if:doc_25_label -->
 | 25 | **{{doc_25_label}}** / *{{doc_25_label}}* | **{{doc_25_location}}** / *{{doc_25_location}}* |
+<!-- endif -->
+<!-- if:doc_26_label -->
 | 26 | **{{doc_26_label}}** / *{{doc_26_label}}* | **{{doc_26_location}}** / *{{doc_26_location}}* |
+<!-- endif -->
+<!-- if:doc_27_label -->
 | 27 | **{{doc_27_label}}** / *{{doc_27_label}}* | **{{doc_27_location}}** / *{{doc_27_location}}* |
+<!-- endif -->
+<!-- if:doc_28_label -->
 | 28 | **{{doc_28_label}}** / *{{doc_28_label}}* | **{{doc_28_location}}** / *{{doc_28_location}}* |
+<!-- endif -->
+<!-- if:doc_29_label -->
 | 29 | **{{doc_29_label}}** / *{{doc_29_label}}* | **{{doc_29_location}}** / *{{doc_29_location}}* |
+<!-- endif -->
+<!-- if:doc_30_label -->
 | 30 | **{{doc_30_label}}** / *{{doc_30_label}}* | **{{doc_30_location}}** / *{{doc_30_location}}* |
+<!-- endif -->
 
 <!-- pagebreak -->
 
