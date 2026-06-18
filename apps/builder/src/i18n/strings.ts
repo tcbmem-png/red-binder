@@ -210,3 +210,48 @@ export const STRINGS: Record<Locale, Strings> = {
 
 /** Picker order — POA is presented first (ARCHITECTURE §3b). */
 export const PICKER_ORDER: DocKind[] = ['poa', 'rbp', 'detention'];
+
+export interface PoaStrings {
+  title: string;
+  effectivenessTitle: string;
+  immediate: string;
+  springing: string;
+  springingWarn: string;
+  giftLabel: string;
+  giftHelp: string;
+  back: string;
+  continueCta: string;
+  needState: string;
+}
+
+export const POA_STRINGS: Record<Locale, PoaStrings> = {
+  en: {
+    title: 'Your power of attorney',
+    effectivenessTitle: 'When it takes effect',
+    immediate: 'Immediately — my Agent can act the moment I sign. (Recommended.)',
+    springing: "Only if I become incapacitated, detained, or removed — a 'springing' power.",
+    springingWarn:
+      'A springing power may require someone to prove the trigger before a bank will act, which can delay your Agent.',
+    giftLabel: 'Let my Agent make limited gifts for my spouse and dependents',
+    giftHelp:
+      'Bounded by the annual federal gift-tax exclusion, for dependent support only. Leave it unchecked to grant no gift power.',
+    back: 'Back',
+    continueCta: 'Continue',
+    needState: 'Choose your state to continue.',
+  },
+  es: {
+    title: 'Tu poder legal',
+    effectivenessTitle: 'Cuándo entra en vigor',
+    immediate: 'De inmediato — mi Agente puede actuar en cuanto yo firme. (Recomendado.)',
+    springing:
+      'Solo si quedo incapacitado, detenido o expulsado — un poder “que entra en vigor después”.',
+    springingWarn:
+      'Un poder que entra en vigor después puede requerir que alguien pruebe la causa antes de que un banco actúe, lo que puede retrasar a tu Agente.',
+    giftLabel: 'Permitir que mi Agente haga regalos limitados para mi cónyuge y dependientes',
+    giftHelp:
+      'Limitado por la exclusión anual del impuesto federal sobre regalos, solo para el sostenimiento de dependientes. Déjalo sin marcar para no otorgar ningún poder de regalo.',
+    back: 'Atrás',
+    continueCta: 'Continuar',
+    needState: 'Elige tu estado para continuar.',
+  },
+};

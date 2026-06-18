@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { DocKind } from '@red-binder/schema';
 import { CoreIntake } from './components/CoreIntake';
 import { DocumentPicker } from './components/DocumentPicker';
+import { POASection } from './components/POASection';
 import { PICKER_ORDER, STRINGS, type Locale } from './i18n/strings';
 
 const DOC_FROM_PARAM: Record<string, DocKind> = {
@@ -10,7 +11,7 @@ const DOC_FROM_PARAM: Record<string, DocKind> = {
   detention: 'detention', // Door B (?doc=detention) pre-selects the Pocket Plan
 };
 
-type Step = 'picker' | 'core' | 'done';
+type Step = 'picker' | 'core' | 'poa' | 'done';
 
 export function App() {
   const [locale, setLocale] = useState<Locale>('en');
@@ -76,7 +77,15 @@ export function App() {
             locale={locale}
             selected={chosen}
             onBack={() => setStep('picker')}
-            onSubmitted={() => setStep('done')}
+            onSubmitted={() => setStep(chosen.includes('poa') ? 'poa' : 'done')}
+          />
+        )}
+
+        {step === 'poa' && (
+          <POASection
+            locale={locale}
+            onBack={() => setStep('core')}
+            onContinue={() => setStep('done')}
           />
         )}
 
