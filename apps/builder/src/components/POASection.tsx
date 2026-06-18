@@ -12,19 +12,21 @@ export interface PoaSelections {
 
 export function POASection({
   locale,
+  initial,
   onBack,
   onContinue,
 }: {
   locale: Locale;
+  initial?: PoaSelections;
   onBack: () => void;
   onContinue: (poa: PoaSelections) => void;
 }) {
   const t = POA_STRINGS[locale];
-  const [jurisdiction, setJurisdiction] = useState<string | null>(null);
+  const [jurisdiction, setJurisdiction] = useState<string | null>(initial?.jurisdiction ?? null);
   const [effectiveness, setEffectiveness] = useState<'immediately' | 'on_incapacity'>(
-    'immediately',
+    initial?.effectiveness ?? 'immediately',
   );
-  const [giftPower, setGiftPower] = useState(false);
+  const [giftPower, setGiftPower] = useState(initial?.giftPower ?? false);
 
   return (
     <div className="space-y-6">
