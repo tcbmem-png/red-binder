@@ -1,6 +1,6 @@
-// Bilingual microcopy. EN is verbatim from BRANDING — Build Handoff §2.
-// ES is DRAFT and flagged for the phase-8 native bilingual review (neutral LatAm, ~8th grade) —
-// do not treat ES as final. Voice: plain words, calm, dignity not fear; CTAs name the next action.
+// Bilingual microcopy. EN is verbatim from BRANDING — Build Handoff §2 where given, else authored
+// in the handoff voice. ES is DRAFT and flagged for the phase-8 native bilingual review (neutral
+// LatAm, ~8th grade) — do not treat ES as final. Voice: plain words, calm, dignity not fear.
 import type { DocKind } from '@red-binder/schema';
 
 export type Locale = 'en' | 'es';
@@ -8,6 +8,45 @@ export type Locale = 'en' | 'es';
 export interface PickerCardCopy {
   name: string;
   description: string;
+}
+
+export interface IntakeStrings {
+  heading: string;
+  identityTitle: string;
+  contactTitle: string;
+  agentsTitle: string;
+  agentsHelp: string;
+  emergencyTitle: string;
+  emergencyHelp: string;
+  primaryAgent: string;
+  successorAgent: string;
+  secondSuccessor: string;
+  addBackup: string;
+  addSecondBackup: string;
+  addContact: string;
+  remove: string;
+  optional: string;
+  back: string;
+  continueCta: string;
+  reviewStub: string;
+  labels: {
+    given_names: string;
+    apellido_paterno: string;
+    apellido_materno: string;
+    dob: string;
+    address: string;
+    county: string;
+    phone: string;
+    email: string;
+    agentFirst: string;
+    agentLast: string;
+    agentRelationship: string;
+    agentAddress: string;
+    agentPhone: string;
+    ecName: string;
+    ecRelationship: string;
+    ecPhone: string;
+  };
 }
 
 export interface Strings {
@@ -22,9 +61,8 @@ export interface Strings {
   langToggle: string;
   tcb: string;
   notLegalAdvice: string;
-  nextStub: string;
-  chosenLabel: string;
   cards: Record<DocKind, PickerCardCopy>;
+  intake: IntakeStrings;
 }
 
 export const STRINGS: Record<Locale, Strings> = {
@@ -42,8 +80,6 @@ export const STRINGS: Record<Locale, Strings> = {
     tcb: 'A TCB Law initiative. Built by Taylor C. Berger, attorney (MS/TN).',
     notLegalAdvice:
       'This is a free tool, not legal advice, and using it does not make us your lawyers.',
-    nextStub: "Next, you'll enter your information once — and only what these documents need.",
-    chosenLabel: "You're creating:",
     cards: {
       poa: {
         name: 'Power of attorney — who handles money & home',
@@ -58,6 +94,45 @@ export const STRINGS: Record<Locale, Strings> = {
         name: 'Pocket Plan',
         description:
           'A card you carry and a plan that helps your family reach a lawyer fast — set up before you ever need it.',
+      },
+    },
+    intake: {
+      heading: 'About you and your people',
+      identityTitle: 'About you',
+      contactTitle: 'Where you live',
+      agentsTitle: 'Who you trust',
+      agentsHelp: 'The person who can act for you — and backups, in case they can’t.',
+      emergencyTitle: 'People to call',
+      emergencyHelp: 'Who should be called first.',
+      primaryAgent: 'The person you trust most',
+      successorAgent: 'Backup person',
+      secondSuccessor: 'Second backup',
+      addBackup: 'Add a backup person',
+      addSecondBackup: 'Add a second backup',
+      addContact: 'Add another contact',
+      remove: 'Remove',
+      optional: 'Optional — only if it helps.',
+      back: 'Back',
+      continueCta: 'Continue',
+      reviewStub:
+        'Next: your document details, then a review before anything is made. (Coming in the next phases.)',
+      labels: {
+        given_names: 'First (and middle) name',
+        apellido_paterno: 'First surname (apellido paterno)',
+        apellido_materno: 'Second surname (apellido materno)',
+        dob: 'Date of birth',
+        address: 'Home address',
+        county: 'County',
+        phone: 'Phone',
+        email: 'Email',
+        agentFirst: 'First name',
+        agentLast: 'Last name',
+        agentRelationship: 'Relationship to you',
+        agentAddress: 'Address',
+        agentPhone: 'Phone',
+        ecName: 'Name',
+        ecRelationship: 'Relationship',
+        ecPhone: 'Phone',
       },
     },
   },
@@ -75,9 +150,6 @@ export const STRINGS: Record<Locale, Strings> = {
     tcb: 'Una iniciativa de TCB Law. Creado por Taylor C. Berger, abogado (MS/TN).',
     notLegalAdvice:
       'Esta es una herramienta gratuita, no es asesoría legal, y usarla no nos convierte en tus abogados.',
-    nextStub:
-      'Después, pondrás tu información una sola vez — y solo lo que estos documentos necesitan.',
-    chosenLabel: 'Estás creando:',
     cards: {
       poa: {
         name: 'Poder legal — quién maneja el dinero y la casa',
@@ -92,6 +164,45 @@ export const STRINGS: Record<Locale, Strings> = {
         name: 'Plan de Bolsillo',
         description:
           'Una tarjeta que llevas contigo y un plan para que tu familia localice a un abogado rápido — listo antes de que lo necesites.',
+      },
+    },
+    intake: {
+      heading: 'Sobre ti y tu gente',
+      identityTitle: 'Sobre ti',
+      contactTitle: 'Dónde vives',
+      agentsTitle: 'En quién confías',
+      agentsHelp: 'La persona que puede actuar por ti — y reemplazos, por si no puede.',
+      emergencyTitle: 'Personas para llamar',
+      emergencyHelp: 'A quién se debe llamar primero.',
+      primaryAgent: 'La persona en quien más confías',
+      successorAgent: 'Persona de reemplazo',
+      secondSuccessor: 'Segundo reemplazo',
+      addBackup: 'Agregar una persona de reemplazo',
+      addSecondBackup: 'Agregar un segundo reemplazo',
+      addContact: 'Agregar otro contacto',
+      remove: 'Quitar',
+      optional: 'Opcional — solo si ayuda.',
+      back: 'Atrás',
+      continueCta: 'Continuar',
+      reviewStub:
+        'Sigue: los detalles de tus documentos y una revisión antes de crear algo. (Próximamente.)',
+      labels: {
+        given_names: 'Nombre (y segundo nombre)',
+        apellido_paterno: 'Apellido paterno',
+        apellido_materno: 'Apellido materno',
+        dob: 'Fecha de nacimiento',
+        address: 'Dirección',
+        county: 'Condado',
+        phone: 'Teléfono',
+        email: 'Correo electrónico',
+        agentFirst: 'Nombre',
+        agentLast: 'Apellido',
+        agentRelationship: 'Relación contigo',
+        agentAddress: 'Dirección',
+        agentPhone: 'Teléfono',
+        ecName: 'Nombre',
+        ecRelationship: 'Relación',
+        ecPhone: 'Teléfono',
       },
     },
   },

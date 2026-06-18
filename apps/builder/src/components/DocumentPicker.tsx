@@ -1,13 +1,6 @@
-import { useEffect, useState } from 'react';
 import type { DocKind } from '@red-binder/schema';
 import { PICKER_ORDER, STRINGS, type Locale } from '../i18n/strings';
 import { cn } from '../lib/utils';
-
-const DOC_FROM_PARAM: Record<string, DocKind> = {
-  poa: 'poa',
-  rbp: 'rbp',
-  detention: 'detention', // Door B (?doc=detention) pre-selects the Pocket Plan
-};
 
 function CheckBox({ checked }: { checked: boolean }) {
   return (
@@ -33,28 +26,19 @@ function CheckBox({ checked }: { checked: boolean }) {
   );
 }
 
-export function DocumentPicker({ locale }: { locale: Locale }) {
+export function DocumentPicker({
+  locale,
+  selected,
+  onToggle,
+  onContinue,
+}: {
+  locale: Locale;
+  selected: Set<DocKind>;
+  onToggle: (doc: DocKind) => void;
+  onContinue: () => void;
+}) {
   const t = STRINGS[locale];
-  const [selected, setSelected] = useState<Set<DocKind>>(new Set());
-  const [continued, setContinued] = useState(false);
-
-  useEffect(() => {
-    const param = new URLSearchParams(window.location.search).get('doc');
-    const doc = param ? DOC_FROM_PARAM[param] : undefined;
-    if (doc) setSelected(new Set([doc]));
-  }, []);
-
-  const toggle = (doc: DocKind) => {
-    setContinued(false);
-    setSelected((prev) => {
-      const next = new Set(prev);
-      if (next.has(doc)) next.delete(doc);
-      else next.add(doc);
-      return next;
-    });
-  };
-
-  const chosen = PICKER_ORDER.filter((d) => selected.has(d));
+  const hasSelection = PICKER_ORDER.some((d) => selected.has(d));
 
   return (
     <section className="space-y-6">
@@ -72,7 +56,7 @@ export function DocumentPicker({ locale }: { locale: Locale }) {
               key={doc}
               type="button"
               aria-pressed={isSelected}
-              onClick={() => toggle(doc)}
+              onClick={() => onToggle(doc)}
               className={cn(
                 'flex w-full items-start gap-3 rounded-lg border bg-card p-4 text-left transition-colors',
                 'hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
@@ -89,34 +73,22 @@ export function DocumentPicker({ locale }: { locale: Locale }) {
         })}
       </div>
 
-      {continued ? (
-        <div className="rounded-lg border border-success bg-success-bg p-4">
-          <p className="font-bold text-success-fg">{t.chosenLabel}</p>
-          <ul className="mt-1 list-inside list-disc text-sm text-success-fg">
-            {chosen.map((d) => (
-              <li key={d}>{t.cards[d].name}</li>
-            ))}
-          </ul>
-          <p className="mt-3 text-sm text-success-fg">{t.nextStub}</p>
-        </div>
-      ) : (
-        <div className="space-y-2">
-          <button
-            type="button"
-            disabled={chosen.length === 0}
-            onClick={() => setContinued(true)}
-            className={cn(
-              'inline-flex h-11 items-center justify-center rounded-md px-6 font-bold transition-colors',
-              'bg-primary text-primary-foreground hover:opacity-90',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
-              'disabled:cursor-not-allowed disabled:opacity-40',
-            )}
-          >
-            {t.continueCta}
-          </button>
-          {chosen.length === 0 && <p className="text-sm text-muted-foreground">{t.pickerEmpty}</p>}
-        </div>
-      )}
+      <div className="space-y-2">
+        <button
+          type="button"
+          disabled={!hasSelection}
+          onClick={onContinue}
+          className={cn(
+            'inline-flex h-11 items-center justify-center rounded-md px-6 font-bold transition-colors',
+            'bg-primary text-primary-foreground hover:opacity-90',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+            'disabled:cursor-not-allowed disabled:opacity-40',
+          )}
+        >
+          {t.continueCta}
+        </button>
+        {!hasSelection && <p className="text-sm text-muted-foreground">{t.pickerEmpty}</p>}
+      </div>
     </section>
   );
 }
