@@ -183,3 +183,20 @@ export function coreTokens(data: Record<string, unknown>): Record<string, string
 
   return out;
 }
+
+/** Emergency-contact tokens: emergency_N_{name,relationship,phone} (1–5), for the RBP call-list.
+ *  The Pocket Plan card's who-to-call backup is sliced from emergency_contacts[0] in the app. */
+export function emergencyTokens(data: Record<string, unknown>): Record<string, string> {
+  const out: Record<string, string> = {};
+  const list = Array.isArray(data.emergency_contacts) ? data.emergency_contacts : [];
+  list.slice(0, 5).forEach((row, i) => {
+    if (!row || typeof row !== 'object') return;
+    const r = row as Record<string, unknown>;
+    const n = i + 1;
+    for (const field of ['name', 'relationship', 'phone']) {
+      const v = r[field];
+      if (typeof v === 'string' && v.trim() !== '') out[`emergency_${n}_${field}`] = v.trim();
+    }
+  });
+  return out;
+}

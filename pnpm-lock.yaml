@@ -41,12 +41,18 @@ importers:
       '@hookform/resolvers':
         specifier: ^5.4.0
         version: 5.4.0(react-hook-form@7.79.0(react@19.2.7))
+      '@red-binder/engine':
+        specifier: workspace:^
+        version: link:../../packages/engine
       '@red-binder/poa-data':
         specifier: workspace:^
         version: link:../../packages/poa-data
       '@red-binder/schema':
         specifier: workspace:^
         version: link:../../packages/schema
+      '@red-binder/templates':
+        specifier: workspace:^
+        version: link:../../packages/templates
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -93,6 +99,9 @@ importers:
       vite:
         specifier: ^6.0.0
         version: 6.4.3(@types/node@22.19.21)(jiti@1.21.7)
+      vitest:
+        specifier: ^2.1.8
+        version: 2.1.9(@types/node@22.19.21)(jiti@1.21.7)
 
   packages/engine:
     dependencies:

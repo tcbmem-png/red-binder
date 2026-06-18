@@ -25,3 +25,17 @@ export const poaSchema = z.object({
 
 export type Effectiveness = z.infer<typeof effectivenessSchema>;
 export type PoaInput = z.infer<typeof poaSchema>;
+
+/**
+ * POA token bridge. Effectiveness becomes the two checkbox booleans; the elected gift power sets
+ * {{grant_gift_power}} (present-only-when-granted, driving the engine's <!-- if:grant_gift_power -->
+ * gift article). The governing-law state name is injected by the app from poa-data, not here.
+ */
+export function poaTokens(data: Record<string, unknown>): Record<string, string | boolean> {
+  const out: Record<string, string | boolean> = {
+    effective_immediately: data.effectiveness === 'immediately',
+    effective_on_incapacity: data.effectiveness === 'on_incapacity',
+  };
+  if (data.giftPower === true) out.grant_gift_power = true;
+  return out;
+}
