@@ -96,10 +96,19 @@ export function buildRenderInputs({
   }
 
   if (selected.includes('rbp')) {
+    // The RBP's POA-reference passages are gated on `poa_included`: they render ONLY when the POA
+    // is part of the SAME generation, so a Plan-only run never references a POA that isn't in the
+    // download (no blank state, no "back of this binder"). When the POA is included we also supply
+    // the state from the chosen jurisdiction so the cover reads "for the State of <state>".
+    const rbpInjected: Record<string, string> = { generated_date: generatedDate };
+    if (selected.includes('poa')) {
+      rbpInjected.poa_included = 'yes';
+      rbpInjected.state = getJurisdiction(str(payload.jurisdiction) ?? '')?.name ?? '';
+    }
     inputs.push({
       template: { id: 'red-binder-plan', source: rbpBasic },
       data: { ...core, ...emergencyTokens(payload), ...rbpTokens(payload) },
-      injected: { generated_date: generatedDate },
+      injected: rbpInjected,
       locale: 'bilingual',
     });
   }
