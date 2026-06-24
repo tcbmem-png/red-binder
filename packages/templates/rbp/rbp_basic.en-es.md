@@ -21,8 +21,10 @@ Prepared for: **{{principal_first}} {{principal_last}}**
 Generated: **{{generated_date}}**
 *Generado el: {{generated_date}}*
 
+<!-- if:poa_included -->
 This binder includes a Durable Financial Power of Attorney for the State of {{state}}. The Power of Attorney must be signed and notarized to be effective. See the back of this binder.
 *Esta carpeta incluye un Poder Duradero para Asuntos Financieros para el Estado de {{state}}. El Poder debe ser firmado y notariado para tener efecto. Vea la parte de atrás de esta carpeta.*
+<!-- endif -->
 
 <!-- pagebreak -->
 
@@ -68,8 +70,10 @@ You will find:
 - *Contactos de emergencia a quienes puede llamar.*
 - A list of where important documents are kept.
 - *Una lista de dónde se guardan los documentos importantes.*
+<!-- if:poa_included -->
 - A Durable Financial Power of Attorney naming my Agent.
 - *Un Poder Duradero para Asuntos Financieros que nombra a mi Agente.*
+<!-- endif -->
 
 Please follow the steps calmly and in order.
 *Por favor siga los pasos con calma y en orden.*
@@ -130,8 +134,10 @@ Email: **{{principal_email}}**
 
 *Agente Principal (Persona autorizada para ayudar)*
 
+<!-- if:poa_included -->
 This is the person named in the Power of Attorney at the back of this binder.
 *Esta es la persona nombrada en el Poder al final de esta carpeta.*
+<!-- endif -->
 
 Name: **{{agent_first}} {{agent_last}}**
 *Nombre: {{agent_first}} {{agent_last}}*
@@ -528,6 +534,8 @@ School: **{{child_20_school}}**
 
 <!-- pagebreak -->
 
+<!-- if:emergency_1_name -->
+
 ---
 
 # **SECTION 4 — EMERGENCY CONTACTS**
@@ -550,6 +558,9 @@ Relationship: **{{emergency_1_relationship}}**
 Phone: **{{emergency_1_phone}}**
 *Teléfono: {{emergency_1_phone}}*
 
+<!-- endif -->
+<!-- if:emergency_2_name -->
+
 ---
 
 ### Contact 2 / Contacto 2
@@ -562,6 +573,9 @@ Relationship: **{{emergency_2_relationship}}**
 
 Phone: **{{emergency_2_phone}}**
 *Teléfono: {{emergency_2_phone}}*
+
+<!-- endif -->
+<!-- if:emergency_3_name -->
 
 ---
 
@@ -576,6 +590,9 @@ Relationship: **{{emergency_3_relationship}}**
 Phone: **{{emergency_3_phone}}**
 *Teléfono: {{emergency_3_phone}}*
 
+<!-- endif -->
+<!-- if:emergency_4_name -->
+
 ---
 
 ### Contact 4 / Contacto 4
@@ -589,6 +606,9 @@ Relationship: **{{emergency_4_relationship}}**
 Phone: **{{emergency_4_phone}}**
 *Teléfono: {{emergency_4_phone}}*
 
+<!-- endif -->
+<!-- if:emergency_5_name -->
+
 ---
 
 ### Contact 5 / Contacto 5
@@ -601,6 +621,8 @@ Relationship: **{{emergency_5_relationship}}**
 
 Phone: **{{emergency_5_phone}}**
 *Teléfono: {{emergency_5_phone}}*
+
+<!-- endif -->
 
 <!-- pagebreak -->
 
@@ -717,8 +739,10 @@ Where to find important papers, IDs, keys, account information, and other docume
 This Red Binder Plan is a free family emergency planning tool. It is **not legal advice**. Using this document does not create an attorney-client relationship between you and Taylor C. Berger, TCB Law, or the Red Binder Project.
 *Este Plan de la Carpeta Roja es una herramienta gratuita de planificación de emergencias familiares. No es asesoría legal. El uso de este documento no crea una relación de abogado-cliente entre usted y Taylor C. Berger, TCB Law ni el Red Binder Project.*
 
+<!-- if:poa_included -->
 The Durable Financial Power of Attorney included in this binder **must be signed and notarized according to the law of your state** to be effective. A Power of Attorney that has not been signed and notarized is **not valid** and **cannot be used** by your Agent.
 *El Poder Duradero para Asuntos Financieros incluido en esta carpeta debe ser firmado y notariado conforme a la ley de su estado para tener efecto. Un Poder que no ha sido firmado y notariado no es válido y no puede ser usado por su Agente.*
+<!-- endif -->
 
 If your situation is complicated — for example, if you own a business, have property in more than one state, or have specific concerns about immigration, custody, or detention — please consult a licensed attorney before relying on this plan.
 *Si su situación es complicada — por ejemplo, si tiene un negocio, propiedades en más de un estado, o preocupaciones específicas sobre inmigración, custodia o detención — por favor consulte a un abogado con licencia antes de confiar en este plan.*
