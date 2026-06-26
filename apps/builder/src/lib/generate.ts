@@ -142,20 +142,11 @@ export function buildRenderInputs({
       data: { ...pick(core, BINDER_IDENTITY_TOKENS), ...det },
       injected: { generated_date: generatedDate },
       assets,
-      attachments: detentionAttachments(payload),
       locale: 'bilingual',
     });
   }
 
   return inputs;
-}
-
-/** §3 gate: the fillable blank G-28 attaches only when opted-in AND ratified. Empty until then. */
-function detentionAttachments(payload: Record<string, unknown>): Uint8Array[] | undefined {
-  if (G28_FILLABLE_ENABLED && payload.include_g28_blank === true) {
-    // The blank G-28 asset is not shipped until Taylor ratifies §3; instructions-and-link is the default.
-  }
-  return undefined;
 }
 
 /**
@@ -175,12 +166,21 @@ export function buildG28Values(payload: Record<string, unknown>) {
 /** Render every selected document and hand each to the browser as its own file. Client-side only. */
 export async function generateAndDownload(opts: GenerateOptions): Promise<number> {
   const results = await renderDocuments(buildRenderInputs(opts));
-  // The G-28 is a filled AcroForm, not a markdown render — fill it separately and lazy-load the
-  // ~490 KB form asset so it never weighs down the main bundle. Hard-gated by G28_FILLABLE_ENABLED.
-  if (G28_FILLABLE_ENABLED && opts.selected.includes('g28')) {
-    const { fillG28 } = await import('@red-binder/engine/g28');
-    results.push(await fillG28(buildG28Values(opts.payload)));
+
+  // The G-28 is a filled AcroForm, not a markdown render, so it's produced outside renderDocuments,
+  // and its ~490 KB form asset is lazy-loaded so it never weighs down the main bundle. Two paths,
+  // both hard-gated by G28_FILLABLE_ENABLED:
+  //   • the standalone G-28 document — filled with the client's Part 3 info;
+  //   • the detention binder's opt-in "include a fillable blank G-28" — the untouched blank form.
+  const wantsFilledG28 = opts.selected.includes('g28');
+  const wantsBlankG28 =
+    opts.selected.includes('detention') && opts.payload.include_g28_blank === true;
+  if (G28_FILLABLE_ENABLED && (wantsFilledG28 || wantsBlankG28)) {
+    const { fillG28, getBlankG28 } = await import('@red-binder/engine/g28');
+    if (wantsFilledG28) results.push(await fillG28(buildG28Values(opts.payload)));
+    if (wantsBlankG28) results.push(getBlankG28());
   }
+
   downloadResults(results);
   return results.length;
 }

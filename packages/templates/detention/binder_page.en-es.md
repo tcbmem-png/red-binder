@@ -122,7 +122,7 @@ This plan can't stop a deportation and isn't a lawyer. What it does: it helps yo
 
 **Source.** Authorization text and the §4 microcopy are transcribed from `DD — Phase 5 Legal Resolutions (DRAFT for Sign-off).md` §1 and §4; resolutions locked in `DECISION — Phase 5 Detention Flags.md`.
 
-**§3 G-28.** Instructions-and-link is the default path. The fillable blank G-28 renders only when `{{include_g28_blank}}` is set AND `G28_FILLABLE_ENABLED` (schema/detention) is true — the latter stays false until Taylor ratifies shipping the form. Built as an engine `attachments` asset, never auto-bundled.
+**§3 G-28.** Instructions-and-link is the always-on default (the §3 body above). The opt-in fillable blank G-28 ships only when `{{include_g28_blank}}` is set AND `G28_FILLABLE_ENABLED` (schema/detention) is true — RATIFIED true by Taylor 2026-06-25. Delivered as its own `g-28-blank.pdf` download (engine `getBlankG28`, the untouched USCIS form kept fully fillable — no pdf-lib re-save), generated alongside but never spliced into the binder PDF.
 
 **Voluntary-departure reconciliation (§4).** The card says do not sign a "voluntary departure" paper an officer hands you; this page says ask the judge for voluntary departure. Both are stated the same way — VD is requested from the judge, with counsel.
 

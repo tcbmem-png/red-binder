@@ -1,6 +1,6 @@
 import { PDFDocument } from 'pdf-lib';
 import { describe, expect, it } from 'vitest';
-import { fillG28 } from '../src/g28';
+import { fillG28, getBlankG28 } from '../src/g28';
 
 // G-28 FILL FLOOR. The G-28 we generate pre-fills the CLIENT (Part 3) only; the attorney section
 // (Part 1), eligibility (Part 2), and EVERY signature line must render BLANK — it is a starting
@@ -72,5 +72,20 @@ describe('G-28 fill floor — attorney + signatures BLANK', () => {
     ]) {
       expect(text(f), `${f} must be blank`).toBe('');
     }
+  });
+});
+
+describe('G-28 blank — the untouched form for the detention binder opt-in', () => {
+  it('returns its own g-28-blank.pdf download with every client field empty', async () => {
+    const { bytes, filename } = getBlankG28();
+    expect(filename).toBe('g-28-blank.pdf');
+    expect(bytes[0]).toBe(0x25); // %PDF
+    const { text, dropdown } = await reader(bytes);
+    // It carries NO client data — a clean starting point for the attorney who takes the case.
+    expect(text('#subform[1].Pt3Line5a_FamilyName[0]')).toBe('');
+    expect(text('#subform[1].Pt3Line9_ANumber[0]')).toBe('');
+    expect(text('#subform[1].Line11_EMail[0]')).toBe('');
+    expect(text('#subform[1].Line12a_StreetNumberName[0]')).toBe('');
+    expect(dropdown('#subform[1].Line12d_State[0]')).toBe('');
   });
 });

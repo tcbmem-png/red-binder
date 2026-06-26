@@ -78,3 +78,13 @@ export async function fillG28(values: G28Values): Promise<RenderResult> {
   const bytes = await pdf.save();
   return { filename: 'g-28-notice-of-appearance.pdf', bytes };
 }
+
+/**
+ * The BLANK fillable G-28 — the untouched USCIS form with no data — delivered as its own download
+ * for the detention binder's "include a fillable blank G-28" option. We hand back the embedded form
+ * bytes as-is (no pdf-lib re-save), so it stays fully interactive for the attorney who takes the
+ * case to fill. Same no-fetch embedded asset, so the privacy floor is unchanged.
+ */
+export function getBlankG28(): RenderResult {
+  return { filename: 'g-28-blank.pdf', bytes: base64ToBytes(g28Base64) };
+}
