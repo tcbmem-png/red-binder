@@ -16,6 +16,7 @@ import {
   type DocKind,
   emergencyTokens,
   G28_FILLABLE_ENABLED,
+  g28Tokens,
   poaTokens,
   rbpTokens,
 } from '@red-binder/schema';
@@ -157,9 +158,29 @@ function detentionAttachments(payload: Record<string, unknown>): Uint8Array[] | 
   return undefined;
 }
 
+/**
+ * The G-28 client values: the name comes from coreTokens (apellido_paterno + materno → family,
+ * given_names → given); the rest is normalized in g28Tokens. The engine fills Part 3 only — the
+ * attorney/representative section and every signature stay blank.
+ */
+export function buildG28Values(payload: Record<string, unknown>) {
+  const core = coreTokens(payload);
+  return {
+    familyName: core.principal_last ?? '',
+    givenName: core.principal_first ?? '',
+    ...g28Tokens(payload),
+  };
+}
+
 /** Render every selected document and hand each to the browser as its own file. Client-side only. */
 export async function generateAndDownload(opts: GenerateOptions): Promise<number> {
   const results = await renderDocuments(buildRenderInputs(opts));
+  // The G-28 is a filled AcroForm, not a markdown render — fill it separately and lazy-load the
+  // ~490 KB form asset so it never weighs down the main bundle. Hard-gated by G28_FILLABLE_ENABLED.
+  if (G28_FILLABLE_ENABLED && opts.selected.includes('g28')) {
+    const { fillG28 } = await import('@red-binder/engine/g28');
+    results.push(await fillG28(buildG28Values(opts.payload)));
+  }
   downloadResults(results);
   return results.length;
 }

@@ -58,11 +58,12 @@ export const detentionSchema = z.object({
 export type DetentionInput = z.infer<typeof detentionSchema>;
 
 /**
- * Phase-5 §3 liability gate. The fillable blank G-28 attachment stays DISABLED until Taylor
- * ratifies shipping it; instructions-and-link is the default path. The engine `attachments` path is
- * built, but the app must check this flag AND `include_g28_blank` before attaching the form.
+ * G-28 ship gate — RATIFIED by Taylor 2026-06-25. Enables the standalone G-28 document (the 4th
+ * picker option: a G-28 pre-filled with the client's Part 3 info, attorney section left blank). The
+ * picker hides the G-28 option when this is false. (The separate binder-page blank-G-28 *attachment*
+ * still also requires the per-render `include_g28_blank` opt-in, which the app does not set.)
  */
-export const G28_FILLABLE_ENABLED = false;
+export const G28_FILLABLE_ENABLED = true;
 
 /**
  * Derive the Pocket Plan tokens from the detention payload (the canonical name/DOB tokens come from

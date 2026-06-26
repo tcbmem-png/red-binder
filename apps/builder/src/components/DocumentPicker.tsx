@@ -1,4 +1,4 @@
-import type { DocKind } from '@red-binder/schema';
+import { type DocKind, G28_FILLABLE_ENABLED } from '@red-binder/schema';
 import { PICKER_ORDER, STRINGS, type Locale } from '../i18n/strings';
 import { cn } from '../lib/utils';
 
@@ -38,7 +38,9 @@ export function DocumentPicker({
   onContinue: () => void;
 }) {
   const t = STRINGS[locale];
-  const hasSelection = PICKER_ORDER.some((d) => selected.has(d));
+  // The G-28 (4th option) appears only once ratified (G28_FILLABLE_ENABLED).
+  const visibleDocs = PICKER_ORDER.filter((d) => d !== 'g28' || G28_FILLABLE_ENABLED);
+  const hasSelection = visibleDocs.some((d) => selected.has(d));
 
   return (
     <section className="space-y-6">
@@ -48,7 +50,7 @@ export function DocumentPicker({
       </div>
 
       <div role="group" aria-label={t.pickerHeading} className="space-y-3">
-        {PICKER_ORDER.map((doc) => {
+        {visibleDocs.map((doc) => {
           const isSelected = selected.has(doc);
           const card = t.cards[doc];
           return (
