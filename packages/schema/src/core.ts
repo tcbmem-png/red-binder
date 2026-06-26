@@ -5,7 +5,7 @@
 // (Decision 2026-06-17 — see the project memory.)
 import { z } from 'zod';
 
-export type DocKind = 'rbp' | 'poa' | 'detention';
+export type DocKind = 'rbp' | 'poa' | 'detention' | 'g28';
 
 // ---------------------------------------------------------------- the identity (dual-surname)
 
@@ -94,7 +94,9 @@ interface FieldGroup {
 
 /** Ordered so the composed schema is deterministic. */
 export const CORE_FIELD_GROUPS: FieldGroup[] = [
-  { key: 'identity', schema: identitySchema, neededBy: ['rbp', 'poa', 'detention'] },
+  // g28 needs the name (Part 3) — it pulls identity for that; the G-28 has no client DOB field, so
+  // the collected DOB is unused by this doc (minor over-collection; unify into a name-only group later).
+  { key: 'identity', schema: identitySchema, neededBy: ['rbp', 'poa', 'detention', 'g28'] },
   { key: 'contact', schema: contactSchema, neededBy: ['rbp', 'poa'] },
   { key: 'agentChain', schema: agentChainSchema, neededBy: ['rbp', 'poa'] },
   { key: 'emergencyContacts', schema: emergencyContactsSchema, neededBy: ['rbp', 'detention'] },

@@ -26,8 +26,8 @@ describe('detentionSchema', () => {
     ).toBe(true);
   });
 
-  it('keeps the fillable G-28 attachment disabled until Taylor ratifies it', () => {
-    expect(G28_FILLABLE_ENABLED).toBe(false);
+  it('has the G-28 ratified (G28_FILLABLE_ENABLED) — the standalone G-28 document ships', () => {
+    expect(G28_FILLABLE_ENABLED).toBe(true);
   });
 });
 

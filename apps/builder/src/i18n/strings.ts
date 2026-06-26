@@ -157,6 +157,11 @@ export const STRINGS: Record<Locale, Strings> = {
         description:
           'A card you carry and a plan that helps your family reach a lawyer fast — set up before you ever need it.',
       },
+      g28: {
+        name: 'G-28 — a head start for your lawyer',
+        description:
+          'Form G-28, filled with your information so a lawyer who takes your case can act fast. The lawyer section stays blank for them to complete and sign — do not file it yourself.',
+      },
     },
     intake: {
       heading: 'About you and your people',
@@ -260,6 +265,11 @@ export const STRINGS: Record<Locale, Strings> = {
         description:
           'Una tarjeta que llevas contigo y un plan para que tu familia localice a un abogado rápido — listo antes de que lo necesites.',
       },
+      g28: {
+        name: 'G-28 — un adelanto para tu abogado',
+        description:
+          'El Formulario G-28, con tu información ya puesta para que un abogado que tome tu caso actúe rápido. La sección del abogado queda en blanco para que él la complete y firme — no lo presentes tú.',
+      },
     },
     intake: {
       heading: 'Sobre ti y tu gente',
@@ -304,7 +314,9 @@ export const STRINGS: Record<Locale, Strings> = {
 };
 
 /** Picker order — POA is presented first (ARCHITECTURE §3b). */
-export const PICKER_ORDER: DocKind[] = ['poa', 'rbp', 'detention'];
+// The G-28 sits last; it is shown in the picker only when G28_FILLABLE_ENABLED is true (gated in
+// DocumentPicker). The order also drives the section flow, so the G-28 intake comes after the rest.
+export const PICKER_ORDER: DocKind[] = ['poa', 'rbp', 'detention', 'g28'];
 
 export interface PoaStrings {
   title: string;

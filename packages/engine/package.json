@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./browser": "./src/browser.ts"
+    "./browser": "./src/browser.ts",
+    "./g28": "./src/g28.ts"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",

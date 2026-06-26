@@ -6,6 +6,7 @@ import { DetentionSection, type DetentionSelections } from './components/Detenti
 import { DocumentPicker } from './components/DocumentPicker';
 import { POASection, type PoaSelections } from './components/POASection';
 import { RBPSection, type RbpSelections } from './components/RBPSection';
+import { G28Section, type G28Selections } from './components/G28Section';
 import { SiteFooter } from './components/SiteFooter';
 import { SiteHeader } from './components/SiteHeader';
 import { generateAndDownload } from './lib/generate';
@@ -15,6 +16,7 @@ const DOC_FROM_PARAM: Record<string, DocKind> = {
   poa: 'poa',
   rbp: 'rbp',
   detention: 'detention', // Door B (?doc=detention) pre-selects the Pocket Plan
+  g28: 'g28',
 };
 
 type Step = 'picker' | 'core' | 'sections' | 'review' | 'done';
@@ -69,6 +71,7 @@ export function App() {
   const [poa, setPoa] = useState<PoaSelections | null>(null);
   const [rbp, setRbp] = useState<RbpSelections | null>(null);
   const [detention, setDetention] = useState<DetentionSelections | null>(null);
+  const [g28, setG28] = useState<G28Selections | null>(null);
   const [photo, setPhoto] = useState<Uint8Array | undefined>(undefined);
 
   const [gen, setGen] = useState<'idle' | 'working' | 'error'>('idle');
@@ -109,6 +112,7 @@ export function App() {
         ...(poa ?? {}),
         ...(rbp ?? {}),
         ...(detention ?? {}),
+        ...(g28 ?? {}),
       };
       const assets = photo ? { images: { photo } } : undefined;
       await generateAndDownload({ selected: chosen, payload, assets, generatedDate: today() });
@@ -126,6 +130,7 @@ export function App() {
     setPoa(null);
     setRbp(null);
     setDetention(null);
+    setG28(null);
     setPhoto(undefined);
     setGen('idle');
     setStep('picker');
@@ -211,6 +216,18 @@ export function App() {
                   onPhotoChange={setPhoto}
                   onContinue={(d) => {
                     setDetention(d);
+                    nextSection();
+                  }}
+                />
+              );
+            if (doc === 'g28')
+              return (
+                <G28Section
+                  locale={locale}
+                  initial={g28 ?? undefined}
+                  onBack={prevSection}
+                  onContinue={(d) => {
+                    setG28(d);
                     nextSection();
                   }}
                 />
